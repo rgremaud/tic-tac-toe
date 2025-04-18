@@ -9,5 +9,4 @@ It is convention to put all your Ruby files into a lib directory. For example:
 General overview of needed lib files
 - Gameboard
 - Gamepieces
-- Xs
-- Os
+- Gamelogic
