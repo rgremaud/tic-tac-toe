@@ -9,12 +9,7 @@
 # 4 5 6        Checking for win would have to look at 2 [0][1],4[1][0],5[1][1] and see if there is X there
 # 7 8 9        Can't just add 1 to both coordinates
 #
-# Spot 1 - Check 2, 4, 5
-# Spot 2 - Check 1, 3, 5
-# Spot 3 - Check 2, 5, 6
-# Spot 4 - Check 1, 5, 7
-# Spot 5 - Check 1, 2, 3, 4, 6, 7, 8, 9
-# Spot 6 - Check 3, 5, 9
-# Spot 7 - Check 4, 5, 8
-# Spot 8 - Check 5, 7, 9
-# Spot 9 - Check 8, 5, 6
+# game_array = [[nil,nil,nil],[nil,nil,nil],[nil,nil,nil]]
+#
+# create Player class
+#
