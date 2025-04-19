@@ -8,6 +8,8 @@ board = Gameboard.new
 
 player_x = Player.new('x')
 
-player_x.token_check
-
 board.play_token(0, 'X')
+# board.play_token(1, 'X')
+# board.play_token(2, 'X')
+
+board.win_check
