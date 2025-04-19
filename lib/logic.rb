@@ -16,11 +16,12 @@
 
 class Logic < Gameboard
   # class to include check for win condition when token is played
-  # horizontal_check - checks for +1 and -1, if true then +2 or -2 for matching tokens on most recent token play
+  # reference the current_move array, ex last move was placed at [0,1,x] - [row,column,token]
+  # horizontal_check - check if game_array[0+1 or 0-1][1] is x
   #
-  # vertical_check
+  # vertical_check - check game_array[0][1+1 or 1-1] is
   #
-  # diagonal_check
+  # diagonal_check - check game_array[0+1][1+1]
   #
   # include a win_condition tracker set to 0, move to 1 if winner is found which triggers game_over
 end
