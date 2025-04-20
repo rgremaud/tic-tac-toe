@@ -1,12 +1,12 @@
-Building tic-tac-toe
+Building tic-tac-toe inspired by a 3x3 magic-square
 
-Initial notes below:
+4 | 9 | 2      All of the win conditions total 15
+--+---+--      Example: 4 + 9 + 2 = 15
+3 | 5 | 7               3 + 5 + 7 = 15
+--+---+--               4  + 5 + 6 = 15
+8 | 1 | 6
 
-Organization
-One class per file. Every time you create a new class, you should create a new file for it to live in.
-It is convention to put all your Ruby files into a lib directory. For example:
-
-General overview of needed lib files
-- Gameboard
-- Gamepieces
-- Gamelogic
+Files: 
+main.rb - initiate the game state here by creatining initial game
+board.rb - draw initial board and describe rules
+game.rb - create board, two players, and logic to cycle turns until a winner or draw
