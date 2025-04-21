@@ -14,27 +14,27 @@ class Players < Gameboard
 
   attr_reader :player_X_token, :player_O_token
 
-  def current_players
-    puts "Current players are #{@player_X} and #{@player_O}"
-  end
-
-  # Players to be X and O
-  # Give each player a token which will be an attr_reader symbol
-  # Give each player a total_score which starts at 0
-  #
-  # Game will then operate in a loop until 15 points are scored or all slots are taken
-  def get_points
+  def play_game
     # needs to loop until there is a winner or draw
     # loop example:
-    # i = 0
-    # loop do
-    #   puts "i is #{i}"
-    #   i += 1
-    #   break if i == 9
-    # end
-    display_board
+    active = 1
+    i = 0
+    loop do
+      # Use the loop to alternate whose turn it is
+      # update print notification to display whose turn it is
+      # swap by alternating between i being odd or even
+      print 'Please enter the point total of the location you wish to place your token on: '
+      number = gets.to_i
+      play_location = @game_array.index(number)
+      @game_array[play_location] = 'X'
+      @player_X_score += number
+      i += 1
+      display_board
+      active_player
+      break if i == 9 # || player_X_score == 15 || player_O_score == 15
+    end
+
     # print the current board state
-    print 'Please enter an available number on the board: '
     # @game_array = [4, 9, 2, 3, 5, 7, 8, 1, 6]
     # ex number entered is 8
     # check if current board spot is available
@@ -50,7 +50,18 @@ class Players < Gameboard
     # Once turn is over:
     # 1 - checks for win condition.  If player has exactly 15 then they have won
     # 2 - If no winner, swap to other players token for next turn
-    number = gets.to_i
-    puts "You have selected #{number}"
+  end
+
+  def active_player
+    active_player = ''
+    if active = 1
+      puts "Active player is #{@player_X}"
+      active_player = @player_X
+      active *= -1
+    else
+      puts "Active player is #{@player_O}"
+      active_player = @player_O
+      active *= -1
+    end
   end
 end

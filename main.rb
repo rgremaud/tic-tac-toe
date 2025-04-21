@@ -4,8 +4,9 @@ require_relative 'lib/board'
 require_relative 'lib/players'
 
 new_game = Gameboard.new
-new_game.display_board
+new_game.rules
 
 game = Players.new('Romain', 'Whitney')
 game.display_board
-# game.get_points
+game.current_players
+game.play_game
