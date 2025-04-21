@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Players
+class Players < Gameboard
   # Initiate the game by drawing board, creating two players
   def initialize(player1_name, player2_name)
     @game_array = [4, 9, 2, 3, 5, 7, 8, 1, 6]
@@ -12,15 +12,7 @@ class Players
     @player_O_score = 0
   end
 
-  attr_reader :player_X_score, :player_O_score
-
-  def display_board
-    puts "#{@game_array[0]} | #{@game_array[1]} | #{@game_array[2]}  This game is a version of tic-tac-toe formatted as a magic square."
-    puts '--+---+--'
-    puts "#{@game_array[3]} | #{@game_array[4]} | #{@game_array[5]}  goal is to score 15 points, which will also be equivalent to winning"
-    puts '--+---+--'
-    puts "#{@game_array[6]} | #{@game_array[7]} | #{@game_array[8]}  a game of tic-tac-toe.  Good luck!"
-  end
+  attr_reader :player_X_token, :player_O_token
 
   def current_players
     puts "Current players are #{@player_X} and #{@player_O}"
@@ -33,6 +25,13 @@ class Players
   # Game will then operate in a loop until 15 points are scored or all slots are taken
   def get_points
     # needs to loop until there is a winner or draw
+    # loop example:
+    # i = 0
+    # loop do
+    #   puts "i is #{i}"
+    #   i += 1
+    #   break if i == 9
+    # end
     display_board
     # print the current board state
     print 'Please enter an available number on the board: '

@@ -7,5 +7,5 @@ new_game = Gameboard.new
 new_game.display_board
 
 game = Players.new('Romain', 'Whitney')
-game.current_players
-game.get_points
+game.display_board
+# game.get_points
