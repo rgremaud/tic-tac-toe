@@ -23,4 +23,14 @@ class Gameboard
   def current_players
     puts "Current players are #{@player_X} and #{@player_O}"
   end
+
+  def win_check
+    if @player_X_score == 15
+      puts "#{@player_X} has won!"
+    elsif @player_O_score == 15
+      puts "#{@player_O} has won!"
+    else
+      puts 'It is a draw!'
+    end
+  end
 end
