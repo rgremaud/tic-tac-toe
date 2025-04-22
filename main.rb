@@ -6,7 +6,7 @@ require_relative 'lib/players'
 new_game = Gameboard.new
 new_game.rules
 
-game = Players.new('Romain', 'Whitney')
+game = Players.new('You', 'Me')
 game.display_board
 game.current_players
 game.play_game

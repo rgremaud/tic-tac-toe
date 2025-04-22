@@ -19,8 +19,7 @@ class Players < Gameboard
     active_player = @player_X
     i = 0
     loop do
-      # swap by alternating between i being odd or even
-      puts "Active player is #{active_player}"
+      # puts "Active player is #{active_player}"
       print 'Please enter the point total of the location you wish to place your token on: '
       number = gets.to_i
       play_location = @game_array.index(number)

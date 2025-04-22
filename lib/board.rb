@@ -21,7 +21,7 @@ class Gameboard
   end
 
   def current_players
-    puts "Current players are #{@player_X} and #{@player_O}"
+    puts "X is #{@player_X} and O is #{@player_O}.  X goes first."
   end
 
   def win_check
